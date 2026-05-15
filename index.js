@@ -13,8 +13,7 @@ for (let i = 0; i <= a.length; i++) {
         total += a[i]
     }
 }
-let avarage = total / a.length
 
 console.log(max)
 console.log(min)
-console.log(avarage)
+console.log(total / a.length)
