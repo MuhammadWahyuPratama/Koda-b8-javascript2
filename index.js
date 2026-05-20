@@ -6,6 +6,12 @@ let total = 0
 
 
 function main() {
+    if (!Array.isArray(a)) {
+        throw new Error("Data harus berupa array");
+    }
+    if (a.length === 0) {
+        throw new Error("Array tidak boleh kosong");
+    }
     for (let i = 0; i <= a.length; i++) {
         if (a[i] > max) {
             max = a[i]
@@ -20,6 +26,10 @@ function main() {
     console.log("Nilai Avarage nya adalah : ", total / a.length)
 }
 
-main()
+try {
+    main()
+} catch (error) {
+    console.log(error)
+}
 
 
