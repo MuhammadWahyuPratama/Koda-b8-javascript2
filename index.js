@@ -15,9 +15,9 @@ function main() {
             total += a[i]
         }
     }
-    console.log(max)
-    console.log(min)
-    console.log(total / a.length)
+    console.log("Nilai Max nya adalah :", max)
+    console.log("Nilai min nya adalah : ", min)
+    console.log("Nilai Avarage nya adalah : ", total / a.length)
 }
 
 main()
