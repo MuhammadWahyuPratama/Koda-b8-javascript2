@@ -1,35 +1,13 @@
-const a = [20, 30, 40, 50, 60]
-
-let max = a[0]
-let min = a[0]
-let total = 0
-
-
-function main() {
-    if (!Array.isArray(a)) {
-        throw new Error("Data harus berupa array");
-    }
-    if (a.length === 0) {
-        throw new Error("Array tidak boleh kosong");
-    }
-    for (let i = 0; i <= a.length; i++) {
-        if (a[i] > max) {
-            max = a[i]
-            if (a[i] < min) {
-                min = a[i]
-            }
-            total += a[i]
-        }
-    }
-    console.log("Nilai Max nya adalah :", max)
-    console.log("Nilai min nya adalah : ", min)
-    console.log("Nilai Avarage nya adalah : ", total / a.length)
-}
+const { main } = require("./function.js")
 
 try {
-    main()
-} catch (error) {
-    console.log(error)
-}
+    const data = [20, 30, 40, 50, 60]
+    const resultData = main(data)
+    console.log(resultData.max)
+    console.log(resultData.min)
+    console.log(resultData.average)
 
+} catch (error) {
+    console.log(`${error.message}`)
+}
 
