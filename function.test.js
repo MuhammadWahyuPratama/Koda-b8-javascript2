@@ -10,8 +10,8 @@ describe("index process", () => {
     assert.equal(result.average, 40)
     })
   it("should update min value", () => {
-    const result = main([50,40,30,20,10])
-    assert.equal(result.min,10)
+    const result = main([60,50,40,30,20])
+    assert.equal(result.min,20)
     })
   it("should throw error if input is not array", () => {
      assert.throws(() => main(""),{
