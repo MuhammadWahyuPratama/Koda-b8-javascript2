@@ -1,3 +1,22 @@
+/**
+ * @typedef {number[]} InputData
+ */
+
+/**
+ * @typedef {Object} processData
+ * @property {number} max - Nilai terbesar
+ * @property {number} min - Nilai terkecil
+ * @property {number} average - Nilai rata-rata
+ */
+
+
+/**
+ *
+ * @param {InputData} input an object array 
+ * @returns {processData} an calculation from min , max and average
+ * @throws {Error} if the parameter value is not an array
+ * @throws {Error} if array empty
+ */
 function main(input) {
   if (!Array.isArray(input)) {
     throw new Error("parameters must be array")
